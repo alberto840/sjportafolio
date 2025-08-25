@@ -1,1 +1,110 @@
-<p>about-page works!</p>
+<div>
+    <div class="bg-body px-[11%] py-[5%]">
+        <div class="grid grid-cols-3 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="col-span-1 px-10 flex flex-col align-middle justify-center text-white">
+                <p class="text-[48px] font-black">HELLO!</p>
+                <p class="text-[24px] font-extralight mb-4">
+                    My name is Sanjey
+                </p>
+                <img src="../../../../assets/illutrations/sjpic.jpg" alt="Logo" class="bg-cover" />
+            </div>
+            <div class="col-span-2 px-10 text-white flex flex-col align-middle justify-center">
+                <p class="text-[24px] font-extralight">
+                    Contact me:
+                </p>
+                <p class="text-[18px] font-light my-1">
+                    Phone: +591 68123075
+                </p>
+                <p class="text-[18px] font-light my-1">
+                    Email: sanjeychrissmiranda&#64;hotmail.com
+                </p>
+                <p class="text-[18px] font-light my-7">
+                    I’m a junior UI/UX designer specializing in motion graphics for UI. I’m passionate about exploring
+                    new technologies and finding innovative ways to enhance my work. With over 7 years of experience in
+                    motion graphics, I bring creative and dynamic visual solutions to every project
+                </p>
+                <div class="flex flex-row space-x-10 my-4">
+                    <a href="#"
+                        class="rounded-full bg-secondary px-6 py-2.5 text-2xl font-light text-white shadow-xs hover:bg-white hover:text-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary">
+                        Download CV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-body px-[11%] py-[5%]">
+        <div class="grid grid-cols-3 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="col-span-1 px-10 flex flex-col align-middle justify-self-start text-primary">
+                <p class="text-[48px] font-black">Experience</p>
+            </div>
+            <div class="col-span-2">
+                @for (item of experienceDataSource; track item) {
+                    <div class="grid grid-cols-2 gap-6 md:grid-cols-2 lg:grid-cols-2">
+                        <div
+                            class="pb-10 col-span-1 px-10 text-white flex flex-col align-middle justify-center border-white border-solid border-r-2">
+                            <p class="text-[24px] font-semibold">
+                                {{ item.company }}
+                            </p>
+                            <p class="text-[20px] font-light">
+                                {{ item.position }}
+                            </p>
+                        </div>
+                        <div class="pb-10 col-span-1 px-10 text-white flex flex-col align-middle justify-center">
+                            <p class="text-[24px] font-semibold">
+                                {{ item.year_begin }} - {{ item.year_end }}
+                            </p>
+                            <p class="text-[20px] font-light">
+                                Based on: {{ item.based }} - {{ item.company_country }}
+                            </p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="bg-body px-[11%] py-[5%]">
+        <div class="grid grid-cols-3 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="col-span-1 px-10 flex flex-col align-middle justify-self-start text-primary">
+                <p class="text-[48px] font-black">Education</p>
+            </div>
+            <div class="col-span-2">
+                @for (item of educationDataSource; track item) {
+                    <div class="grid grid-cols-2 gap-6 md:grid-cols-2 lg:grid-cols-2">
+                        <div
+                            class="pb-10 col-span-1 px-10 text-white flex flex-col align-middle justify-center border-white border-solid border-r-2">
+                            <p class="text-[24px] font-semibold">
+                                {{ item.title }}
+                            </p>
+                            <p class="text-[20px] font-light">
+                                {{ item.year_begin }} - {{ item.year_end }}
+                            </p>
+                        </div>
+                        <div class="pb-10 col-span-1 px-10 text-white flex flex-col align-middle justify-center">
+                            <p class="text-[24px] font-semibold">
+                                {{ item.description }}
+                            </p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="bg-body px-[11%] py-[5%]">
+        <div class="grid grid-cols-3 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="col-span-3 px-10 flex flex-col align-middle justify-self-start text-primary">
+                <p class="text-[48px] font-black">I´ve worked with</p>
+            </div>            
+            <div class="col-span-3 px-10 grid grid-cols-3 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                @for (item of workedWithDataSource; track item) {
+                    <div class="col-span-1">
+                        <p class="text-[24px] font-semibold">{{ item.id }}</p>
+                        <p class="text-[20px] font-light">{{ item.company }}</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <section id="contact" class="scroll-mt-24">
+        <app-footer></app-footer>
+    </section>
+</div>
