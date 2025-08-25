@@ -1,3 +1,13 @@
-<div class="bg-black">
-a
+<div class="bg-body">
+    <div class="px-[11%] py-[5%]">
+        <div class="text-white col-span-3 flex align-middle justify-center mb-6">
+            <h1 class="text-[48px] font-black">Education</h1>
+        </div>
+        <mat-grid-list cols="4" rowHeight="100px" gutterSize="20px">
+            @for (tile of tiles; track tile) {
+            <mat-grid-tile [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color"
+                class="rounded-3xl">{{tile.text}}</mat-grid-tile>
+            }
+        </mat-grid-list>
+    </div>
 </div>

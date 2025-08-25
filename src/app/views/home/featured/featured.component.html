@@ -1,3 +1,24 @@
-<div class="bg-black">
-a
+<div class="bg-gray">
+    <div class="bg-cover" style="background-image: url('assets/illutrations/background.png');">
+        <div class="grid grid-cols-3 gap-6 md:grid-cols-2 lg:grid-cols-3 px-[11%] py-[5%]">
+            <div class="col-span-2 text-white flex flex-col align-middle justify-center">
+                <h1 class="text-[40px] font-black">I enjoy creating unique UIs that deliver a <span
+                        class="text-primary">different experience.</span></h1>
+            </div>
+            <div class="col-span-1 text-white flex flex-col">
+                <img src="../../../../assets/illutrations/pj.png" alt="Logo" class="bg-cover" />
+            </div>
+        </div>
+    </div>
+    <div class="px-[11%] pb-[5%]">
+        <div class="text-white col-span-3 flex align-middle justify-center mb-6">
+            <h1 class="text-[48px] font-black">Featured Works</h1>
+        </div>
+        <mat-grid-list cols="4" rowHeight="100px" gutterSize="20px">
+            @for (tile of tiles; track tile) {
+            <mat-grid-tile [colspan]="tile.cols" [rowspan]="tile.rows" [style.background]="tile.color"
+                class="rounded-3xl">{{tile.text}}</mat-grid-tile>
+            }
+        </mat-grid-list>
+    </div>
 </div>

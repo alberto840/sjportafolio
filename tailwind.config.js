@@ -12,10 +12,6 @@ module.exports = {
       xxxl:{ min: "1601px", max: "1920px" }, // 1601–1920
       minSm: { min: "768px" },               // >=768
     },
-    container: {
-      center: true,
-      padding: "15px",
-    },
     fontFamily: {
       primary: ["'Poppins'", "sans-serif"],
       fontawesome: ["'Font Awesome 5 Pro'"],
@@ -30,7 +26,7 @@ module.exports = {
         border: "#EFF0F2",
         borderLight: "#41c7ae",
         body: "#1C1C1C",
-        gray: "#fcfcfc",     // para fondos de input
+        gray: "#171717",     // para fondos de input
         lightest: "#f9f9f9",
         teal: "#8b349f",
         danger: "#c7415a",
