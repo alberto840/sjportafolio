@@ -23,10 +23,10 @@ jobs:
           node-version: 20.17.0
 
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: Build Angular app
-        run: yarn build
+        run: ng build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
