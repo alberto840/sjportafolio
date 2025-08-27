@@ -26,7 +26,11 @@ jobs:
         run: yarn install
 
       - name: Build Angular app
-        run: yarn build
+        run: yarn build        
+
+      - name: SPA fallback
+        run: |
+          cp dist/sjportafolio/browser/index.html dist/sjportafolio/browser/404.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
