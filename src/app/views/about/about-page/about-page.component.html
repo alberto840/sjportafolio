@@ -6,10 +6,10 @@
                 <p class="text-[24px] font-extralight mb-4">
                     My name is Sanjey
                 </p>
-                <img src="assets/illutrations/sjpic.jpg" alt="Logo" class="bg-cover" />
+                <img src="assets/illutrations/sjpic.jpg" alt="Logo" class="bg-cover rounded-[36px]" />
             </div>
             <div class="col-span-2 px-10 text-white flex flex-col align-middle justify-center">
-                <p class="text-[24px] font-extralight">
+                <p class="text-[24px] font-bold">
                     Contact me:
                 </p>
                 <p class="text-[18px] font-light my-1">
@@ -51,7 +51,7 @@
                         </div>
                         <div class="pb-10 col-span-1 px-10 text-white flex flex-col align-middle justify-center">
                             <p class="text-[24px] font-semibold">
-                                {{ item.year_begin }} - {{ item.year_end }}
+                                {{ item.year_begin }} - {{ item.year_end }} <span class="text-[20px] font-light">{{ item.type_contract ? ' / '+item.type_contract : '' }}</span>
                             </p>
                             <p class="text-[20px] font-light">
                                 Based on: {{ item.based }} - {{ item.company_country }}
@@ -94,11 +94,10 @@
             <div class="col-span-3 px-10 flex flex-col align-middle justify-self-start text-primary">
                 <p class="text-[48px] font-black">I´ve worked with</p>
             </div>            
-            <div class="col-span-3 px-10 grid grid-cols-3 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <div class="col-span-3 px-10 grid grid-cols-9 gap-6 md:grid-cols-2 lg:grid-cols-3">
                 @for (item of workedWithDataSource; track item) {
-                    <div class="col-span-1">
-                        <p class="text-[24px] font-semibold">{{ item.id }}</p>
-                        <p class="text-[20px] font-light">{{ item.company }}</p>
+                    <div class="col-span-1 flex flex-col align-middle justify-center">
+                        <img src="{{ item.img }}" alt="{{ item.company }}" class="w-25 flex align-middle justify-center" />
                     </div>
                 }
             </div>

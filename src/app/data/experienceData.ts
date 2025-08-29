@@ -8,6 +8,7 @@ export interface ExperienceInterfaceData {
     month_end: string;
     based: string;
     company_country: string;
+    type_contract: string;
 }
 export const experienceData: ExperienceInterfaceData[] = [
     {
@@ -19,7 +20,8 @@ export const experienceData: ExperienceInterfaceData[] = [
         month_begin: '',
         month_end: '',
         based: 'La Paz',
-        company_country: 'Bolivia'
+        company_country: 'Bolivia',
+        type_contract: ''
     },
     {
         id: 2,
@@ -30,7 +32,8 @@ export const experienceData: ExperienceInterfaceData[] = [
         month_begin: '',
         month_end: '',
         based: 'New York',
-        company_country: 'USA'
+        company_country: 'USA',
+        type_contract: ''
     },
     {
         id: 3,
@@ -41,7 +44,8 @@ export const experienceData: ExperienceInterfaceData[] = [
         month_begin: '',
         month_end: '',
         based: 'La Paz',
-        company_country: 'Bolivia'
+        company_country: 'Bolivia',
+        type_contract: ''
     },
     {
         id: 4,
@@ -52,7 +56,8 @@ export const experienceData: ExperienceInterfaceData[] = [
         month_begin: '',
         month_end: '',
         based: 'La Paz',
-        company_country: 'Bolivia'
+        company_country: 'Bolivia',
+        type_contract: ''
     },
     {
         id: 5,
@@ -63,6 +68,7 @@ export const experienceData: ExperienceInterfaceData[] = [
         month_begin: '',
         month_end: '',
         based: 'La Paz',
-        company_country: 'Bolivia'
+        company_country: 'Bolivia',
+        type_contract: 'Internship'
     }
 ];
