@@ -2,16 +2,6 @@
 module.exports = {
   content: ["./src/**/*.{html,ts}"],
   theme: {
-    screens: {
-      xs:  { max: "575px" },                 // <=575
-      sm:  { max: "767px" },                 // <=767
-      md:  { min: "768px",  max: "991px" },  // 768–991
-      lg:  { min: "992px",  max: "1200px" }, // 992–1200
-      xl:  { min: "1201px", max: "1400px" }, // 1201–1400
-      xxl: { min: "1401px", max: "1600px" }, // 1401–1600
-      xxxl:{ min: "1601px", max: "1920px" }, // 1601–1920
-      minSm: { min: "768px" },               // >=768
-    },
     fontFamily: {
       primary: ["'Poppins'", "sans-serif"],
       fontawesome: ["'Font Awesome 5 Pro'"],
