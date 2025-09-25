@@ -19,10 +19,10 @@ export class FeaturedComponent {
   // Los datos de los mosaicos se mantienen igual
   tiles: Tile[] = [
     { text: 'Uno', cols: 4, rows: 3, color: 'gray' },
-    { text: 'Dos', cols: 3, rows: 2, color: 'gray' },
-    { text: 'Tres', cols: 1, rows: 1, color: 'gray' },
-    { text: 'Cuatro', cols: 1, rows: 2, color: 'gray' },
-    { text: 'Cinco', cols: 3, rows: 1, color: 'gray' },
+    { text: 'Dos', cols: 3, rows: 3, color: 'gray' },
+    { text: 'Tres', cols: 1, rows: 2, color: 'gray' },
+    { text: 'Cuatro', cols: 1, rows: 3, color: 'gray' },
+    { text: 'Cinco', cols: 3, rows: 2, color: 'gray' },
   ];
 
   // Propiedad para almacenar el número de columnas de la grilla

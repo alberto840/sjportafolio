@@ -1,0 +1,4 @@
+canvas {
+  width: 100%; /* Ocupa todo el ancho del contenedor padre */
+  height: 100%; /* Ocupa toda la altura del contenedor padre */
+}

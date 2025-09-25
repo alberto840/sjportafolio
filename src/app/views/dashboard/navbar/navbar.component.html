@@ -27,5 +27,38 @@
       class="rounded-full bg-primary px-3.5 py-2.5 font-light text-sm sm:text-base lg:text-lg text-white shadow-xs hover:bg-white hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
       Contact
     </button>
+    <button [matMenuTriggerFor]="menu"
+      class="rounded-full bg-primary px-2.5 font-light text-sm sm:text-base lg:text-lg text-white shadow-xs hover:bg-white hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+      <img [src]="selectedLanguage === 'en' ? 'assets/flags/um.png' : 'assets/flags/es.png'" alt="Menu"
+        class="inline-block rounded-full pb-1" width="25" />
+    </button>
+    @if (isOpen()) {
+    <div
+      class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition transform ease-out duration-100"
+      role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" (click)="$event.stopPropagation()">
+      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+        Tu perfil
+      </a>
+      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+        Ajustes
+      </a>
+      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+        Cerrar sesión
+      </a>
+    </div>
+    }
+    <mat-menu #menu="matMenu" class="bg-slate-700" style="background-color: blue;">
+      <ng-template matMenuContent class="bg-slate-700" style="background-color: blue;">
+        <button mat-menu-item (click)="switchLanguage('en')">
+          <img src="assets/flags/um.png" alt="English" class="inline-block mr-2" width="20" />
+          <span>English</span>
+        </button>
+        <button mat-menu-item (click)="switchLanguage('es')">
+          <img src="assets/flags/es.png" alt="Spanish" class="inline-block mr-2" width="20" />
+          <span>Spanish</span>
+        </button>
+      </ng-template>
+    </mat-menu>
+
   </div>
 </div>

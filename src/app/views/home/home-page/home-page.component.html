@@ -1,4 +1,4 @@
-<div>
+<div class="overflow-x-hidden">
     <section id="home" class="scroll-mt-24">
         <app-introduction></app-introduction>
     </section>
@@ -19,3 +19,16 @@
         <app-footer></app-footer>
     </section>
 </div>
+
+@if (showScrollButton()) {
+<button (click)="scrollToTop()"
+    class="fixed bottom-6 right-6
+           w-[60px] h-[60px] 
+           flex items-center justify-center 
+           bg-secondary text-white rounded-full shadow-lg transition-all duration-300 ease-in-out hover:bg-primary 
+           focus:outline-none focus:ring-1 focus:ring-white focus:ring-offset-2"
+    aria-label="Subir a la parte superior">
+    
+    <mat-icon class="flex text-[25px] align-middle justify-center">keyboard_arrow_up</mat-icon>
+</button>
+}

@@ -17,9 +17,9 @@ export interface Tile {
 })
 export class EducationComponent {
   tiles: Tile[] = [
-    { text: 'Uno', cols: 2, rows: 3, color: 'gray' },
+    { text: 'Uno', cols: 2, rows: 4, color: 'gray' },
     { text: 'Dos', cols: 2, rows: 2, color: 'gray' },
-    { text: 'Tres', cols: 1, rows: 1, color: 'gray' },
-    { text: 'Cuatro', cols: 1, rows: 1, color: 'gray' },
+    { text: 'Tres', cols: 1, rows: 2, color: 'gray' },
+    { text: 'Cuatro', cols: 1, rows: 2, color: 'gray' },
   ];
 }
