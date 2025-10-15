@@ -10,9 +10,9 @@ import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  private serviceID = 'service_g8wlulr';
-  private templateID = 'template_fykrhz5';
-  private publicKey = 'lTpZru93uuLI8Mp-z';
+  private serviceID = 'service_zl92hck';
+  private templateID = 'template_ybqy96u';
+  private publicKey = '0Jps5NQq82gxdbFhk';
 
   public sendEmail(formData: any) {
     const templateParams = {

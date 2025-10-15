@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { Rive } from '@rive-app/canvas';
 
 export interface Tile {
-  color: string;
   cols: number;
   rows: number;
-  text: string;
+  color?: string; 
+  riveArtboard: string;
+  riveSrc: string;
+  riveStateMachines: string;
 }
 
 @Component({
@@ -15,11 +18,50 @@ export interface Tile {
   templateUrl: './education.component.html',
   styleUrl: './education.component.css'
 })
-export class EducationComponent {
+export class EducationComponent implements AfterViewInit {
+  @ViewChildren('riveCanvas')
+  canvasRefs!: QueryList<ElementRef<HTMLCanvasElement>>;
+
   tiles: Tile[] = [
-    { text: 'Uno', cols: 2, rows: 4, color: 'gray' },
-    { text: 'Dos', cols: 2, rows: 2, color: 'gray' },
-    { text: 'Tres', cols: 1, rows: 2, color: 'gray' },
-    { text: 'Cuatro', cols: 1, rows: 2, color: 'gray' },
+    { 
+      cols: 5, rows: 4, 
+      riveSrc: 'assets/rive/portfolio.riv',
+      riveStateMachines: "State Machine 1",
+      riveArtboard: 'Education F1' 
+    },
+    { 
+      cols: 4, rows: 2, 
+      riveSrc: 'assets/rive/portfolio.riv',
+      riveStateMachines: "State Machine 1",
+      riveArtboard: 'Education F2' 
+    },
+    { 
+      cols: 2, rows: 2, 
+      riveSrc: 'assets/rive/portfolio.riv',
+      riveStateMachines: "State Machine 1",
+      riveArtboard: 'Education F3' 
+    },
+    { 
+      cols: 2, rows: 2, 
+      riveSrc: 'assets/rive/portfolio.riv',
+      riveStateMachines: "State Machine 1",
+      riveArtboard: 'Education F4' 
+    },
   ];
+
+  ngAfterViewInit(): void {
+    this.canvasRefs.forEach((canvasRef, index) => {
+      const config = this.tiles[index]; 
+
+      if (config) {
+        new Rive({
+          src: config.riveSrc,
+          canvas: canvasRef.nativeElement,
+          autoplay: true,
+          stateMachines: config.riveStateMachines,
+          artboard: config.riveArtboard,
+        });
+      }
+    });
+  }
 }
