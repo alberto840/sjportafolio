@@ -88,5 +88,20 @@ export const workedWithData: WorkedWithInterfaceData[] = [
         id: 17,
         company: 'capital',
         img: 'assets/workedwith/capital.png'
+    },
+    {
+        id: 18,
+        company: 'community_gaming',
+        img: 'assets/workedwith/community_gaming.png'
+    },
+    {
+        id: 18,
+        company: 'krafton',
+        img: 'assets/workedwith/krafton.png'
+    },
+    {
+        id: 18,
+        company: 'pubg',
+        img: 'assets/workedwith/pubg.png'
     }
 ];

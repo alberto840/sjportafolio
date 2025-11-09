@@ -34,7 +34,7 @@
     </div>
 
     <div class="col-span-1 md:col-span-2 lg:col-span-2 order-4">
-      <form (ngSubmit)="sendEmail(form.value)" #form="ngForm">
+      <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
         <div class="w-full">
           <h3 class="text-lg md:text-xl font-normal">Email</h3>
           <input type="email" name="user_email" ngModel required class="w-full p-2 border-none rounded text-black mt-2"
